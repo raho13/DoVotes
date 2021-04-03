@@ -1,18 +1,29 @@
 import React from "react";
-import { StyleSheet, Text, View, TextInput } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 
-export default function Button({ color, text }) {
+export default function Button({ color, text, bck, method, data }) {
   return (
-    <View style={styles.border}>
+    <TouchableOpacity
+    activeOpacity={0.8}
+      onPress={() => {
+        method();
+      }}
+      style={[styles.border, { backgroundColor: bck }]}
+    >
       <Text style={{ fontSize: 20, fontWeight: "bold", color: color }}>
         {text}
       </Text>
-    </View>
+    </TouchableOpacity>
   );
 }
 const styles = StyleSheet.create({
   border: {
-    backgroundColor: "#FFFFFF",
     borderRadius: 50,
     paddingVertical: 10,
     paddingHorizontal: 15,

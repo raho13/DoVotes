@@ -7,7 +7,6 @@ import {
   StatusBar,
   ScrollView,
 } from "react-native";
-
 export default function Header() {
   return (
     <View style={styles.container}>
@@ -30,38 +29,13 @@ export default function Header() {
         style={styles.storyField}
       >
         <View style={styles.story}>
-          <Image
-            source={require("../../assets/static/avatar.jpg")}
-            style={styles.storyimg}
-          />
-          <Text style={styles.storytxt}>ictimai fəallar</Text>
-        </View>
-        <View style={styles.story}>
-          <Image
-            source={require("../../assets/static/avatar.jpg")}
-            style={styles.storyimg}
-          />
-          <Text style={styles.storytxt}>ictimai fəallar</Text>
-        </View>
-        <View style={styles.story}>
-          <Image
-            source={require("../../assets/static/avatar.jpg")}
-            style={styles.storyimg}
-          />
-          <Text style={styles.storytxt}>ictimai fəallar</Text>
-        </View>
-        <View style={styles.story}>
-          <Image
-            source={require("../../assets/static/avatar.jpg")}
-            style={styles.storyimg}
-          />
-          <Text style={styles.storytxt}>ictimai fəallar</Text>
-        </View>
-        <View style={styles.story}>
-          <Image
-            source={require("../../assets/static/avatar.jpg")}
-            style={styles.storyimg}
-          />
+          <View style={styles.storyborder}>
+            <Image
+              source={require("../../assets/static/avatar.jpg")}
+              style={styles.storyimg}
+            />
+          </View>
+
           <Text style={styles.storytxt}>ictimai fəallar</Text>
         </View>
       </ScrollView>
@@ -81,25 +55,29 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#0A6CFF",
   },
+  storyborder: {
+    borderColor: "#F7CA44",
+    borderRadius: 100,
+    borderWidth: 3,
+    alignItems: "center",
+  },
   storyField: {
     marginVertical: 15,
     display: "flex",
     flexDirection: "row",
     width: "100%",
-
     height: 110,
   },
   storytxt: {
     fontFamily: "Roboto",
     fontSize: 14,
-    fontWeight: "bold",
   },
   storyimg: {
-    width: "80%",
-    height: "80%",
+    width: 80,
+    height: 80,
     borderRadius: 50,
-    borderWidth: 3.5,
-    borderColor: "#0A6CFF",
+    borderWidth: 2.5,
+    borderColor: "white",
   },
   story: {
     alignItems: "center",

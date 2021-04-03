@@ -33,8 +33,7 @@ export default function Input({ pcr, width, type }) {
   };
   const inpstyle = (par) => {
     return {
- 
-      backgroundColor: "#F2F4FD",
+      backgroundColor: "#F6F6F6",
       width: par,
       borderRadius: 50,
       marginTop: 20,

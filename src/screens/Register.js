@@ -1,8 +1,9 @@
 import React from "react";
-import { StyleSheet, Text, View, ScrollView } from "react-native";
+import { StyleSheet, Text, View ,ScrollView} from "react-native";
 import Header from "../components/Header";
 import Form from "../components/Form";
-export default function Login() {
+
+export default function Register() {
   return (
     <ScrollView>
       <Header />
